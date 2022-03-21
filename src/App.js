@@ -25,7 +25,7 @@ function App() {
       .catch(err=> {
         console.log(err)
       })
-  }, [])
+  }, [blogs])
 
   return (
     <Router >
@@ -44,7 +44,7 @@ function App() {
 
           < Route 
             exact path = 'blogs/:id'
-            element = {< Blog />}
+            element = {< Blog setBlogs={setBlogs}/>}
           />
 
         </Routes>
